@@ -12,4 +12,4 @@
  * - gulp watch      : watches for changes and compile
  * - gulp test       : various tests. e.g. scss linting
  */
-require('./.kickoff-panini/index');
+require('./.generator/index');
