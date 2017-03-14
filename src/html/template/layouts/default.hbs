@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{htmlLang.lang}}">
+
+<head>
+  {{!--The meta tags in head section is automatically build from the src/html/data/htmlHeadMeta.yml data--}}
+	<title>{{title}}</title>
+</head>
+
+<body>
+	<section>
+		{{!--Every single page (in src/html/pages will be rendered into the >body keyword --}}
+  	{{> body}}
+	</section>
+	<footer>
+		{{!--Set the footer in the src/html/template/partials/footer.hbs partial--}}
+		{{> footer}}
+	</footer>
+</body>
+
+</html>

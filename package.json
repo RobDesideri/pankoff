@@ -1,0 +1,171 @@
+{
+  "name": "kickoff-panini",
+  "title": "Kickoff-Panini",
+  "description": "A customized version of Kickoff (https://github.com/TryKickoff/kickoff), a 'lightweight front-end framework for creating scalable, responsive websites'",
+  "version": "8.0.0",
+  "homepage": "https://github.com/RobDesideri/kickoff-panini",
+  "authors": [
+    {
+      "name": "Roberto Desideri",
+      "url": "http://robdesideri.it"
+    }
+  ],
+  "scripts": {
+    "start": "gulp clean && gulp serve",
+    "watch": "gulp watch",
+    "predeploy": "npm prune && npm install",
+    "deploy": "npm run compile:release",
+    "test": "npm run compile:all",
+    "compile:release": "gulp compile --release",
+    "compile:all": "gulp clean && gulp compile",
+    "compile:css": "gulp css",
+    "compile:js": "gulp javascript",
+    "compile:svg": "gulp svg",
+    "compile:html": "gulp html",
+    "compress:images": "gulp images",
+    "clean:all": "gulp clean",
+    "copy:all": "gulp copy",
+    "copy": "gulp copy",
+    "lint:js": "xo",
+    "lint:css": "gulp test:css",
+    "fix:js": "xo --fix",
+    "release-patch": "release-it --non-interactive patch",
+    "release-minor": "release-it --non-interactive minor",
+    "release-major": "release-it --non-interactive major",
+    "release-premajor": "release-it premajor --prereleaseId=\"beta\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RobDesideri/kickoff-panini.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RobDesideri/kickoff-panini/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=6.0"
+  },
+  "dependencies": {
+    "console": "0.5.2",
+    "copy-js": "0.1.1",
+    "double-dollar": "1.0.0",
+    "include-media": "1.4.9",
+    "kickoff-fluidVideo.css": "1.1.0",
+    "kickoff-grid.css": "1.1.1",
+    "kickoff-utils.scss": "2.0.3",
+    "kickoff-welcome.js": "1.4.0",
+    "lite-ready": "1.0.4",
+    "normalize-scss": "6.0.0",
+    "svg4everybody": "2.1.7"
+  },
+  "devDependencies": {
+    "autoprefixer": "6.7.7",
+    "babel-core": "6.24.0",
+    "babel-loader": "6.3.2",
+    "babel-plugin-transform-object-assign": "6.22.0",
+    "babel-preset-es2015": "6.24.0",
+    "browser-sync": "2.18.8",
+    "case-sensitive-paths-webpack-plugin": "1.1.4",
+    "cssnano": "3.10.0",
+    "del": "2.2.2",
+    "eyeglass": "1.2.1",
+    "filesizegzip": "2.0.0",
+    "gulp": "3.9.1",
+    "gulp-banner": "0.1.3",
+    "gulp-imagemin": "3.1.1",
+    "gulp-inject-string": "^1.1.0",
+    "gulp-newer": "1.3.0",
+    "gulp-postcss": "6.3.0",
+    "gulp-real-favicon": "^0.2.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "3.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-stylelint": "3.9.0",
+    "gulp-svgmin": "1.2.3",
+    "gulp-svgstore": "6.1.0",
+    "gulp-tap": "0.1.3",
+    "gulp-util": "3.0.8",
+    "imagemin-pngquant": "5.0.0",
+    "js-yaml": "^3.8.2",
+    "opn": "4.0.2",
+    "panini": "^1.4.0",
+    "postcss-flexbugs-fixes": "2.1.0",
+    "release-it": "^2.5.4",
+    "stylelint": "7.9.0",
+    "stylelint-config-standard": "16.0.0",
+    "webpack": "2.2.1",
+    "xo": "0.17.1"
+  },
+  "keywords": [],
+  "babel": {
+    "presets": [
+      [
+        "es2015",
+        {
+          "modules": false
+        }
+      ]
+    ],
+    "plugins": [
+      "transform-object-assign"
+    ]
+  },
+  "xo": {
+    "esnext": true,
+    "global": [
+      "window"
+    ],
+    "ignores": [
+      "**/assets/src/js/standalone/**/*.js",
+      "**/assets/dist/**/*.js",
+      ".kickoff/**/*.js",
+      "gulpfile.js"
+    ],
+    "rules": {
+      "comma-dangle": [
+        "error",
+        "always-multiline"
+      ],
+      "xo/filename-case": [
+        "off"
+      ]
+    }
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "indentation": [
+        "tab",
+        {
+          "except": [
+            "value"
+          ]
+        }
+      ],
+      "at-rule-empty-line-before": [
+        "always",
+        {
+          "ignore": [
+            "blockless-after-same-name-blockless",
+            "blockless-group"
+          ]
+        }
+      ],
+      "declaration-empty-line-before": [
+        "never"
+      ],
+      "rule-non-nested-empty-line-before": [
+        "always-multi-line",
+        {
+          "except": [
+            "after-single-line-comment"
+          ],
+          "ignore": [
+            "after-comment"
+          ]
+        }
+      ],
+      "max-empty-lines": 2
+    }
+  }
+}

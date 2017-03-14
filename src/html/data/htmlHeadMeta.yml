@@ -1,0 +1,13 @@
+# Set all meta informations that are rendered in html head for every page
+
+# Charset
+charset: utf-8
+
+# Define a name/content fo every meta tag
+meta:
+  - name: viewport
+    content: width=device-width, initial-scale=1.0
+  - name: description
+    content: ''
+  - name: author
+    content: ''

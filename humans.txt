@@ -1,0 +1,19 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# KICKOFF-PANINI TEAM
+
+    Roberto Desideri -- @RobDesideri
+
+# TECHNOLOGY COLOPHON
+
+    HTML
+    CSS
+		Javascript
+    Sass
+		Handlebars
+    Gulp.js
+		Node.js
+    BrowserSync
+    NPM
+    Browserify

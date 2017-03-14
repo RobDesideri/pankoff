@@ -1,0 +1,2 @@
+# Credits
+Main credits for this project go to project [Kickoff](https://github.com/TryKickoff) developed by [Kickoff team](https://github.com/TryKickoff) and the [Panini](https://github.com/zurb/panini) project, develop by [Zurb team](https://github.com/zurb/).
